@@ -4,8 +4,26 @@
 		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
 	</head>
 	<body>
+		<!-- directive = ng-controller -->
+		<!-- Controller Name = StoreController -->
+		<!-- as = informetion local module -->
+		<!-- Alias (  module ) = store -->
+		<div ng-controller="StoreController as store">
+			<!-- Lets load our data into this part of the page -->
+			<!-- <h1> Product Name </h1> -->
+			<h1> {{ store.product.name }} </h1>
+			<!-- <h2> $Product Price </h2> -->
+			<h2> ${{ store.product.price }} </h2>
+			<!-- <p> Product Description </p> -->
+			<p> {{ store.product.description }} </p>
+		</div>
+
+		<!-- Would never print a value in here -->
+		<!-- {{ store.product.name }} -->
+		<!-- The scope of the controller is only inside the div with a controller tag -->
+
+		<!-- The javascript is more faster if to be loaded in html body  -->
 		<script type="text/javascript" src="angularjs/angular.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
-		<p> {{ "Hello," + " Angula!" }} </p>
 	</body>
 </html>
